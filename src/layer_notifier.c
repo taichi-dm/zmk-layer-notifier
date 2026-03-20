@@ -8,6 +8,7 @@
  */
 
 #include <zephyr/kernel.h>
+#include <zephyr/init.h>
 #include <zephyr/logging/log.h>
 
 #include <zmk/event_manager.h>
