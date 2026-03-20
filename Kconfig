@@ -1,0 +1,21 @@
+menuconfig LAYER_NOTIFIER
+    bool "Layer state notifier"
+    default n
+
+if LAYER_NOTIFIER
+
+config LAYER_NOTIFIER_USB
+    bool "USB CDC ACM transport"
+    default y
+    depends on USB_DEVICE_STACK
+
+config LAYER_NOTIFIER_BLE
+    bool "BLE GATT transport"
+    default n
+    depends on BT
+
+config LAYER_NOTIFIER_LOG_LEVEL
+    int "Log level (0=off, 4=debug)"
+    default 4
+
+endif # LAYER_NOTIFIER
