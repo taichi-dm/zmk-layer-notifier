@@ -68,4 +68,4 @@ static int layer_notifier_init(void) {
     return 0;
 }
 
-SYS_INIT(layer_notifier_init, APPLICATION);
+SYS_INIT(layer_notifier_init, APPLICATION, 90);
